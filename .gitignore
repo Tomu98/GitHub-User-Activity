@@ -1,1 +1,3 @@
-.guavenv
+__pycache__/
+
+.guavenv/

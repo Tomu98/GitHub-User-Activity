@@ -1,6 +1,7 @@
 import click
 import json
 from http.client import HTTPSConnection
+from .styles import *
 
 @click.command()
 @click.argument("username", type=str)
@@ -29,17 +30,14 @@ def cli(username):
 
     # Events dictionary
     event_handlers = {
-        "PushEvent": lambda e: f"Pushed {e['payload']['size']} commits to {e['repo']['name']}",
-        "WatchEvent": lambda e: f"Starred {e['repo']['name']}",
-        "CreateEvent": lambda e: f"Created {e['payload']['ref_type']} '{e['payload']['ref']}' in {e['repo']['name']}",
-        "DeleteEvent": lambda e: f"Deleted {e['payload']['ref_type']} '{e['payload']['ref']}' in {e['repo']['name']}",
-        "ForkEvent": lambda e: f"Forked {e['repo']['name']} to {e['payload']['forkee']['full_name']}",
-        "IssueEvent": lambda e: f"Opened a new issue in {e['repo']['name']}",
-        "ReleaseEvent": lambda e: f"Published a new release in {e['repo']['name']}: {e['payload']['release']['name']}",
-        "PullRequestEvent": lambda e: (
-            f"Merged a pull request in {e['repo']['name']}" if e['payload']['action'] == "closed" and e['payload']['pull_request']['merged']
-            else f"Opened a pull request in {e['repo']['name']}"
-        )
+        "PushEvent": lambda e: push_event_message(e['payload']['size'], e['repo']['name']),
+        "WatchEvent": lambda e: watch_event_message(e['repo']['name']),
+        "CreateEvent": lambda e: create_event_message(e['payload']['ref_type'], e['payload']['ref'], e['repo']['name']),
+        "DeleteEvent": lambda e: delete_event_message(e['payload']['ref_type'], e['payload']['ref'], e['repo']['name']),
+        "ForkEvent": lambda e: fork_event_message(e['repo']['name'], e['payload']['forkee']['full_name']),
+        "IssueEvent": lambda e: issue_event_message(e['repo']['name']),
+        "ReleaseEvent": lambda e: release_event_message(e['repo']['name'], e['payload']['release']['name']),
+        "PullRequestEvent": lambda e: pull_request_event_message(e["payload"]["action"], e["repo"]["name"])
     }
 
     # Show events
