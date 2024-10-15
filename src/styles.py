@@ -1,7 +1,9 @@
 from rich.console import Console
 from rich.text import Text
 
+
 console = Console()
+
 
 def push_event_message(size, repo_name):
     message = Text.from_markup(f"- [bold #8ac209]Pushed {size} commits[/bold #8ac209] to [italic underline blue]{repo_name}[/italic underline blue]")
