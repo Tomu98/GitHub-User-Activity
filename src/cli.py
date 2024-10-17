@@ -2,10 +2,11 @@ import click
 import json
 import socket
 from http.client import HTTPSConnection
-from .styles import *
+from styles import *
 
 
 @click.command()
+@click.version_option(version="0.3.3", prog_name="Github User Activity")
 @click.argument("username", type=str)
 def cli(username):
     try:
