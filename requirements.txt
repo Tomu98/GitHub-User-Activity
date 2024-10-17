@@ -1,6 +1,8 @@
 click==8.1.7
 colorama==0.4.6
+-e git+ssh://git@github.com/Tomu98/GitHub-User-Activity.git@f06e14b6c56c24abde41eafc590c6369203aafab#egg=github_user_activity
 markdown-it-py==3.0.0
 mdurl==0.1.2
 Pygments==2.18.0
 rich==13.9.2
+setuptools==75.2.0
