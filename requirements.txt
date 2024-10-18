@@ -1,6 +1,6 @@
 click==8.1.7
 colorama==0.4.6
--e git+ssh://git@github.com/Tomu98/GitHub-User-Activity.git@40944731d063f9e4d97201dea5ceb9d6e3ad2b0a#egg=github_user_activity
+-e git+ssh://git@github.com/Tomu98/GitHub-User-Activity.git@44697ced37cd41d02e30b31df0d7943087485a1f#egg=github_user_activity
 iniconfig==2.0.0
 markdown-it-py==3.0.0
 mdurl==0.1.2
