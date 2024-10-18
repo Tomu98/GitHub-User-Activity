@@ -6,7 +6,7 @@ from styles import *
 
 
 @click.command()
-@click.version_option(version="0.3.4", prog_name="Github User Activity")
+@click.version_option(version="0.3.5", prog_name="Github User Activity")
 @click.argument("username", type=str)
 def cli(username):
     try:
