@@ -38,11 +38,13 @@ def test_username_found(runner, mocker):
     assert result.exit_code == 0
     assert "Pushed" in result.output
 
+
 def test_user_not_found(runner, mocker):
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(404, b""))
     result = runner.invoke(cli, ["NonExistentUser"])
     assert result.exit_code == 1
     assert "User not found" in result.output
+
 
 def test_rate_limit_exceeded(runner, mocker):
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(403, b""))
