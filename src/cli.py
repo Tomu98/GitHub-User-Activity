@@ -6,7 +6,7 @@ from styles import *
 
 
 @click.command()
-@click.version_option(version="0.3.5", prog_name="Github User Activity")
+@click.version_option(version="0.3.6", prog_name="Github User Activity")
 @click.argument("username", type=str)
 def cli(username):
     try:
@@ -24,7 +24,7 @@ def cli(username):
         elif response.status == 403:
             raise click.ClickException("Request forbidden: possible rate limit exceeded")
         elif response.status != 200:
-            raise click.ClickException(f"Unexpected error: {response.status}") 
+            raise click.ClickException(f"Unexpected error: {response.status}")
 
         # Data decoding
         events = json.loads(data.decode("utf-8"))
