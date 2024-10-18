@@ -1,5 +1,7 @@
 __pycache__/
 
 .guavenv/
+.env
 
 *.egg-info
+.pytest_cache
