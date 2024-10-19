@@ -10,6 +10,42 @@ Specific inspiration for this project comes from the following link: [GitHub Use
 
 ## Installation
 
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/Tomu98/GitHub-User-Activity.git
+   ```
+
+2. Within the project directory, create and activate a virtual environment:
+
+   ```bash
+   python -m venv .venv  # Create a virtual environment
+   source .venv/bin/activate  # Activate the environment in Linux/MacOS
+   .venv\Scripts\activate  # Activate the environment in Windows
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Install the package locally:
+
+   ```bash
+   pip install .
+   ```
+
+<br>
+
+## How to use it
+
+To query the recent activity of a GitHub user, run the following command:
+
+  ```bash
+  github-activity <username>
+  ```
+
 <br>
 
 ## Feedback & Contributions
