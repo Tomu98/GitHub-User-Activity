@@ -6,9 +6,12 @@ from http.client import HTTPSConnection
 
 
 @click.command()
-@click.version_option(version="0.4.0", prog_name="Github User Activity")
+@click.version_option(version="1.0.0", prog_name="Github User Activity")
 @click.argument("username", type=str)
 def cli(username):
+    """
+    Fetches and displays recent activity for the specified GitHub username.
+    """
     try:
         connection = HTTPSConnection("api.github.com", timeout=10)
 
