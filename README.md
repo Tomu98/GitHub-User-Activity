@@ -19,12 +19,12 @@ Specific inspiration for this project comes from the following link: [GitHub Use
 2. Within the project directory, create and activate a virtual environment:
 
    ```bash
-   python -m venv .venv  # Create a virtual environment
-   source .venv/bin/activate  # Activate the environment in Linux/MacOS
-   .venv\Scripts\activate  # Activate the environment in Windows
+   python -m venv .venv        # Create a virtual environment
+   source .venv/bin/activate   # Activate the environment in Linux/MacOS
+   .venv\Scripts\activate      # Activate the environment in Windows
    ```
 
-3. Install the package and their dependencies:
+3. Install the package and its dependencies:
 
    ```bash
    pip install .
@@ -36,9 +36,15 @@ Specific inspiration for this project comes from the following link: [GitHub Use
 
 To query the recent activity of a GitHub user, run the following command:
 
-  ```bash
-  github-activity <username>
-  ```
+   ```bash
+   github-activity <username>
+   ```
+
+For example:
+
+   ```bash
+   github-activity Tomu98
+   ```
 
 <br>
 
