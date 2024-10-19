@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='github_user_activity',
-    version='0.3.7',
+    version='0.4.0',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
@@ -15,4 +15,9 @@ setup(
             'github-activity=cli:cli'
         ],
     },
+    description='A CLI tool to display GitHub user activity',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Operating System :: OS Independent',
+    ]
 )
