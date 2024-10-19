@@ -6,7 +6,7 @@ from http.client import HTTPSConnection
 
 
 @click.command()
-@click.version_option(version="1.0.0", prog_name="Github User Activity")
+@click.version_option(version="1.0.1", prog_name="Github User Activity")
 @click.argument("username", type=str)
 def cli(username):
     """
