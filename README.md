@@ -24,13 +24,7 @@ Specific inspiration for this project comes from the following link: [GitHub Use
    .venv\Scripts\activate  # Activate the environment in Windows
    ```
 
-3. Install the dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Install the package locally:
+3. Install the package and their dependencies:
 
    ```bash
    pip install .
