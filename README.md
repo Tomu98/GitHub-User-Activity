@@ -46,6 +46,22 @@ For example:
    python -m src/cli Tomu98
    ```
 
+You can filter the events displayed using the `--event` option. The supported event types are:
+- `push`: Commits pushed.
+- `watch`: Starred repositories.
+- `create`: Created repositories/branches.
+- `delete`: Deleted repositories/branches.
+- `fork`: Forked repositories.
+- `issue`: Issues created.
+- `release`: Releases made.
+- `pr`: Opened/Merged pull requests.
+
+For example, to display only the commits pushed by the user, use:
+
+   ```bash
+   python -m src/cli Tomu98 --event push
+   ```
+
 <br>
 
 ## Feedback & Contributions
