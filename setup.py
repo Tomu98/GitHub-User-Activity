@@ -2,10 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='github_user_activity',
-    version='1.0.1',
+    version='1.0.2',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
+        'setuptools',
         'click',
         'rich',
         'pytest'
