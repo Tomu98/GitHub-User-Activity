@@ -24,10 +24,10 @@ Specific inspiration for this project comes from the following link: [GitHub Use
    .venv\Scripts\activate      # Activate the environment in Windows
    ```
 
-3. Install the package and its dependencies:
+3. Install the dependencies:
 
    ```bash
-   pip install .
+   pip install -r requirements.txt
    ```
 
 <br>
@@ -37,13 +37,13 @@ Specific inspiration for this project comes from the following link: [GitHub Use
 To query the recent activity of a GitHub user, run the following command:
 
    ```bash
-   github-activity <username>
+   python -m src/cli <username>
    ```
 
 For example:
 
    ```bash
-   github-activity Tomu98
+   python -m src/cli Tomu98
    ```
 
 <br>
