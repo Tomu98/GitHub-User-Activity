@@ -2,6 +2,7 @@ __pycache__/
 .pytest_cache
 
 .guavenv/
+.venv
 .env
 
 *.egg-info
