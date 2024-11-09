@@ -6,7 +6,7 @@ from http.client import HTTPSConnection
 
 
 @click.command()
-@click.version_option(version="1.2.0", prog_name="Github User Activity")
+@click.version_option(version="1.2.1", prog_name="Github User Activity")
 @click.argument("username", type=str)
 @click.option("--event", type=str, help="FIlter events by type (push, watch, create, delete, fork, issue, release, pr)",)
 def cli(username, event):
