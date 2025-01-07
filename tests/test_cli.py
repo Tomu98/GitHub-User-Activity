@@ -80,18 +80,12 @@ no_activity_data = b"[]"
 
 
 def test_various_responses(runner, mocker, status_code, response_data, expected_output):
-    """
-    Tests CLI output for different API responses.
-    """
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(status_code, response_data))
     result = runner.invoke(cli, ["Tomu98"])
     assert expected_output in result.output
 
 
 def test_timeout_error(runner, mocker):
-    """
-    Tests handling of a timeout error.
-    """
     mocker.patch("src.cli.HTTPSConnection.request", side_effect=socket.timeout)
     result = runner.invoke(cli, ["Tomu98"])
     assert result.exit_code == 1
@@ -100,9 +94,6 @@ def test_timeout_error(runner, mocker):
 
 # 2. Specific Event Handling
 def test_fork_event(runner, mocker):
-    """
-    Tests handling of a ForkEvent.
-    """
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(200, fork_event_data))
     result = runner.invoke(cli, ["Tomu98"])
     assert result.exit_code == 0
@@ -110,9 +101,6 @@ def test_fork_event(runner, mocker):
 
 
 def test_create_event(runner, mocker):
-    """
-    Tests handling of a CreateEvent.
-    """
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(200, create_event_data))
     result = runner.invoke(cli, ["Tomu98"])
     assert result.exit_code == 0
@@ -121,9 +109,6 @@ def test_create_event(runner, mocker):
 
 # 3. Event Filtering and No Activity
 def test_event_filter(runner, mocker):
-    """
-    Tests the event filtering with the --event option.
-    """
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(200, valid_data))
     result = runner.invoke(cli, ["Tomu98", "--event", "push"])
     assert result.exit_code == 0
@@ -134,9 +119,6 @@ def test_event_filter(runner, mocker):
 
 
 def test_no_activity(runner, mocker):
-    """
-    Tests handling of no recent activity.
-    """
     mocker.patch("src.cli.HTTPSConnection.getresponse", return_value=MockResponse(200, no_activity_data))
     result = runner.invoke(cli, ["Tomu98"])
     assert result.exit_code == 0
