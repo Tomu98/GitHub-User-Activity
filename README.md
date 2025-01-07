@@ -6,7 +6,7 @@ This project is inspired by an idea from [roadmap.sh](https://roadmap.sh), a pla
 
 Specific inspiration for this project comes from the following link: [GitHub User Activity in roadmap.sh](https://roadmap.sh/projects/github-user-activity)
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Version-1.2.1-mediumpurple?style=for-the-badge">
+<img alt="Static Badge" src="https://img.shields.io/badge/Version-1.2.2-mediumpurple?style=for-the-badge">
 
 <br>
 
